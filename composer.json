@@ -1,0 +1,40 @@
+{
+    "name": "omomohagiogu/shipview-portal",
+    "description": "ShipView Micro-Portal – a dedicated shipment tracking plugin for WordPress.",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "php": ">=8.1"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.9",
+        "wp-coding-standards/wpcs": "^3.1",
+        "phpcompatibility/phpcompatibility-wp": "*",
+        "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+        "phpunit/phpunit": "^10.5",
+        "yoast/phpunit-polyfills": "^2.0",
+        "brain/monkey": "^2.6",
+        "php-stubs/wordpress-stubs": "^6.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "ShipView\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ShipView\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "lint":       "phpcs --standard=phpcs.xml.dist",
+        "lint:fix":   "phpcbf --standard=phpcs.xml.dist",
+        "test":       "phpunit --configuration=phpunit.xml.dist",
+        "test:cover": "phpunit --configuration=phpunit.xml.dist --coverage-html=.coverage"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
+}

@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<ruleset name="ShipView">
+    <description>ShipView plugin – WordPress Coding Standards ruleset.</description>
+
+    <!-- Files and folders to check -->
+    <file>shipview-portal.php</file>
+    <file>src/</file>
+    <file>config/</file>
+
+    <!-- Exclude generated / vendored code -->
+    <exclude-pattern>vendor/*</exclude-pattern>
+    <exclude-pattern>node_modules/*</exclude-pattern>
+    <exclude-pattern>tests/*</exclude-pattern>
+    <exclude-pattern>.coverage/*</exclude-pattern>
+
+    <!-- Target PHP version -->
+    <config name="testVersion" value="8.1-"/>
+
+    <!-- Base standard -->
+    <rule ref="WordPress">
+        <!-- Allow short array syntax [] — project preference -->
+        <exclude name="Generic.Arrays.DisallowShortArraySyntax"/>
+    </rule>
+
+    <!-- Stricter subset rules -->
+    <rule ref="WordPress-Extra"/>
+    <rule ref="WordPress-Docs"/>
+
+    <!-- PHPCompatibilityWP: flag anything that won't run on PHP 8.1+ -->
+    <rule ref="PHPCompatibilityWP"/>
+
+    <!-- Text-domain must match plugin slug -->
+    <rule ref="WordPress.WP.I18n">
+        <properties>
+            <property name="text_domain" type="array" value="shipview"/>
+        </properties>
+    </rule>
+
+    <!-- Prefix all global symbols with shipview_ or ShipView -->
+    <rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+        <properties>
+            <property name="prefixes" type="array" value="shipview,ShipView"/>
+        </properties>
+    </rule>
+
+    <!-- Minimum WP version for deprecated-function checks -->
+    <rule ref="WordPress.WP.DeprecatedFunctions">
+        <properties>
+            <property name="minimum_wp_version" value="5.6"/>
+        </properties>
+    </rule>
+</ruleset>

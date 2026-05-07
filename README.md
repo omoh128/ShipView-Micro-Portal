@@ -141,8 +141,7 @@ X-WP-Nonce: <nonce>
 - No additional plugins required
 
 ## 🖼️ Visual Preview
-| Front Page Overview | SHIPVIEW MICRO-PORTAL Plugin |
-| :---: | :---: |
+| Front Page Overview  SHIPVIEW MICRO-PORTAL Plugin |
 | ![FrontPage](./screenshots/front-page.png) |
 
 

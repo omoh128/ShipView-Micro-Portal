@@ -139,3 +139,10 @@ X-WP-Nonce: <nonce>
 - WordPress 6.0+
 - PHP 8.0+
 - No additional plugins required
+
+## 🖼️ Visual Preview
+| Front Page Overview | SHIPVIEW MICRO-PORTAL Plugin |
+| :---: | :---: |
+| ![FrontPage](./screenshots/front-page.png) |
+
+
